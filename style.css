@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(to right, #4BBCE3, #A535C1);
+}
+
+.container{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}   
+
+.image{
+    display: none;
+}
+
+.image img{
+    width: 100%;
+}
+
+.fadeIn{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#prev{
+    position: absolute;
+    top: 45%;
+    left: 0;
+    padding: 16px;
+    color: white;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transition: 0.6s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+#next{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    padding: 16px;
+    color: white;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transition: 0.3s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+#prev:hover, #next:hover{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.dots{
+    margin-top: 2%;
+}
+
+.dot{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+.dot.active{
+    background-color: #000000a1;
+}
+
+.footer{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 300;
+    border-bottom: 1px solid white;
+    padding-bottom: 4px;
+}
+
+@media (max-width: 500px) {
+    .container{
+        width: 100%;
+    }
+}
